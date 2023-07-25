@@ -1,1 +1,14 @@
-<p>header works!</p>
+<header class="border bg-[#82A3A8] relative">
+    <div class="rope | h-12 opacity-30"></div>
+    <ul class="flex justify-between items-center max-w-[900px] mx-auto py-5 px-8 text-2xl text-white font-indie font-bold">
+        <li *ngFor="let link of menuLinks" class="hover:text-black hover:underline">
+            <a [href]="link.url">{{ link.title }}</a>
+        </li>
+    </ul>
+    <div class="rope | h-12 opacity-30"></div>
+
+    <div class="absolute top-1/2 right-5 -translate-y-1/2 text-white text-2xl">
+        <i class="bi bi-cart"></i>
+    </div>
+</header>
+
