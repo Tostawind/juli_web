@@ -1,14 +1,24 @@
-<header class="border bg-[#82A3A8] relative">
+<header class="bg-[#82A3A8] relative ">
     <div class="rope | h-12 opacity-30"></div>
+
+    <!-- LOGO -->
+    <div class="absolute top-1/2 left-24 -translate-y-1/2 cursor-pointer -rotate-3 hover:scale-105 active:scale-95">
+        <h1 class="text-6xl text-white font-serif drop-shadow-lg">J.</h1>
+    </div>
+
+    <!-- NAVBAR -->
     <ul class="flex justify-between items-center max-w-[900px] mx-auto py-5 px-8 text-2xl text-white font-indie font-bold">
         <li *ngFor="let link of menuLinks" class="hover:text-black hover:underline">
             <a [href]="link.url">{{ link.title }}</a>
         </li>
     </ul>
-    <div class="rope | h-12 opacity-30"></div>
-
-    <div class="absolute top-1/2 right-5 -translate-y-1/2 text-white text-2xl">
+    
+    <!-- BASKET -->
+    <div class="absolute top-1/2 right-24 -translate-y-1/2 text-white text-3xl cursor-pointer hover:scale-105 active:scale-95 hover:shadow-xl">
         <i class="bi bi-cart"></i>
+        <div class="absolute top-1/2 -left-5 h-5 w-5 rounded-full bg-green-400 text-sm font-bold text-center select-none">0</div>
     </div>
+    
+    <div class="rope | h-12 opacity-30"></div>
 </header>
 
