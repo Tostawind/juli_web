@@ -1,3 +1,19 @@
 .tag {
-    box-shadow: -4px 6px 5px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: -4px 6px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.arrow {
+    animation: float 1s ease infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(135deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(135deg);
+    }
+    100% {
+        transform: translateY(0) rotate(135deg);
+    }
 }
