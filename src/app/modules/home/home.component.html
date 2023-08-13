@@ -1,43 +1,30 @@
-<section class="flex justify-center h-screen pt-24 pb-10 md:px-8 px-5 bg-white text-black font-indie relative">
+<section class="home-container | flex justify-center items-center h-screen pt-24 pb-10 md:px-8 px-5 
+bg-white text-black font-indie relative overflow-hidden">
 
-    <div class="flex md:flex-row flex-col justify-center md:gap-0 gap-10 md:items-center items-end mx-auto w-[1000px] overflow-hidden">
-        <div class="md:w-1/2 w-full text-center">
-            <h1 class="text-9xl tracking-widest">
-                <span class="text-rainbox-green">J</span>
-                <span class="text-rainbox-natilla">u</span>
-                <span class="text-rainbox-yellow">l</span>
-                <span class="text-rainbox-orange">i</span>
-                <span class="text-rainbox-red">a</span>
-            </h1>
-            <h2 class="md:text-6xl text-5xl tracking-widest md:mt-0 -mt-5">Dieguez</h2>
-            <div class="md:pt-9 w-full grid place-items-end md:translate-x-0 -translate-x-5  md:translate-y-0 translate-y-3">
-                <p class="tag | w-fit md:mx-auto md:px-5 px-3 pt-1 md:text-xl text-base font-special opacity-80 bg-orange-300 md:-rotate-12 -rotate-6">- Creaciones -</p>
-            </div>
-        </div>
-        <div class="h-4/6 md:w-1/2 w-3/5 relative">
-            <img class="h-full w-full object-cover border-4 border-black" src="assets/img/juli_bolas.jpg" alt="Girl snow">
-            <div class="absolute -bottom-5 -right-24 -rotate-45 h-28 w-60 bg-white"></div>
+    <!-- LEFT -->
+    <div class="w-1/2 space-y-14">
+        <!--  -->
+        <img class="h-72 mx-auto object-cover" src="../../../assets/logo/nombre.png">
 
-            <!-- SOCIAL -->
-            <div class="md:hidden flex flex-col justify-between items-center h-3/4 absolute top-1/2 -left-1/2 translate-x-1/2 -translate-y-1/2 pt-5">
-                <ul class="text-3xl opacity-80 flex flex-col items-center space-y-5">
-                    <li>
-                        <a href=""><i class="bi bi-instagram"></i></a>
-                    </li>
-                    <li>
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                    </li>
-                    <li>
-                        <a href=""><i class="bi bi-telegram"></i></a>
-                    </li>
-                </ul>
-
-                <!-- ARROW -->
-                <div class="arrow | border-t-8 border-r-8 border-secondary rounded-t-md rounded-r-md h-8 w-8 rotate-[135deg] cursor-pointer"></div>
-            </div>
-
+        <!-- SOCIAL -->
+        <div class="flex justify-center items-center gap-10">
+            <a href="">
+                <img src="../../../assets/icons/instagram.svg" alt="">
+            </a>
+            <a href="">
+                <img src="../../../assets/icons/spotify.svg" alt="">
+            </a>
+            <a href="">
+                <img src="../../../assets/icons/facebook.svg" alt="">
+            </a>
         </div>
     </div>
-
+    
+    <!-- RIGHT -->
+    <div class="cover-image | relative cursor-pointer">
+        <img class="border-4 border-black relative z-30" src="assets/img/juli_bolas.jpg"> <!-- No funciona SHADOW??? -->
+        <img class="absolute top-5 left-5 z-20 opacity-60" src="assets/img/juli_bolas.jpg">
+        <img class="absolute top-10 left-10 z-10 opacity-30" src="assets/img/juli_bolas.jpg">
+    </div>
     
 </section>

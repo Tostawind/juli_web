@@ -1,19 +1,24 @@
-.tag {
-    box-shadow: -4px 6px 5px 0 rgba(0, 0, 0, 0.2);
-}
+.home-container {
+    .cover-image {
+        transform: rotate(10deg) translateY(2vh);
+        transition: all 2s ease;
 
-.arrow {
-    animation: float 1s ease infinite;
-}
+        &:hover {
+            transform: rotate(0) translateY(0);
+        }
 
-@keyframes float {
-    0% {
-        transform: translateY(0) rotate(135deg);
-    }
-    50% {
-        transform: translateY(-20px) rotate(135deg);
-    }
-    100% {
-        transform: translateY(0) rotate(135deg);
+        img  { 
+            height: 420px;
+            width: 400px;
+            object-fit: cover;
+            transition: all 2s ease; 
+            box-shadow: 4px 6px 5px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        &:hover > img {
+            top: 0;
+            left: 0;
+            box-shadow: none;
+        }
     }
 }
