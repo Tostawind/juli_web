@@ -2,9 +2,10 @@
     .cover-image {
         transform: rotate(10deg) translateY(2vh);
         transition: all 2s ease;
+        animation: image-rotation 1s linear;
 
         &:hover {
-            transform: rotate(0) translateY(0);
+            transform: rotate(0) translateY(0) scale(1.05);
         }
 
         img  { 
@@ -14,6 +15,22 @@
             transition: all 2s ease; 
             box-shadow: 4px 6px 5px 0 rgba(0, 0, 0, 0.2);
         }
+        
+        
+
+
+        img:nth-of-type(2) { animation: image-separation-medium 2s ease; }
+        img:nth-of-type(3) { animation: image-separation-far 2.5s ease; }
+
+        @media (max-width: 768px) { 
+            img  { 
+                height: 220px;
+                width: 200px;
+            }
+
+            img:nth-of-type(2) { animation: image-separation-medium-mobil 2s ease; }
+            img:nth-of-type(3) { animation: image-separation-far-mobil 2.5s ease; }
+        }
 
         &:hover > img {
             top: 0;
@@ -22,3 +39,40 @@
         }
     }
 }
+
+@keyframes image-rotation {
+    from { transform: rotate(0deg) translateY(0vh);}
+    to { transform: rotate(10deg) translateY(2vh);}
+}
+
+@keyframes image-separation-medium {
+    from {
+        top: 0;
+        left: 0; 
+    }
+    to { 
+        top: 20px;
+        left: 20px;
+    }
+}
+
+@keyframes image-separation-far {
+    from {
+        top: 0;
+        left: 0; 
+    }
+    to { 
+        top: 40px;
+        left: 40px;
+    }
+}
+
+    @keyframes image-separation-medium-mobil {
+        from { top: 0; left: 0; }
+        to { top: 8px; left: 8px; }
+    }
+    
+    @keyframes image-separation-far-mobil {
+        from { top: 0; left: 0; }
+        to { top: 16px; left: 16px; }
+    }

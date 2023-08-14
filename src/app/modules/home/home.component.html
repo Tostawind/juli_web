@@ -1,30 +1,24 @@
-<section class="home-container | flex justify-center items-center h-screen pt-24 pb-10 md:px-8 px-5 
-bg-white text-black font-indie relative overflow-hidden">
+<section class="home-container | flex md:flex-row flex-col justify-center items-center gap-10
+h-[calc(100vh-96px)] md:pt-24 pb-10 md:px-8 px-5 bg-white text-black font-indie relative overflow-hidden">
 
     <!-- LEFT -->
-    <div class="w-1/2 space-y-14">
-        <!--  -->
-        <img class="h-72 mx-auto object-cover" src="../../../assets/logo/nombre.png">
+    <div class="md:w-1/2 w-full md:space-y-14 space-y-5">
+        <!-- TITLE -->
+        <img class="md:h-72 h-40  mx-auto object-contain" src="assets/logo/nombre.png">
 
         <!-- SOCIAL -->
-        <div class="flex justify-center items-center gap-10">
-            <a href="">
-                <img src="../../../assets/icons/instagram.svg" alt="">
-            </a>
-            <a href="">
-                <img src="../../../assets/icons/spotify.svg" alt="">
-            </a>
-            <a href="">
-                <img src="../../../assets/icons/facebook.svg" alt="">
+        <div class="flex justify-center items-center md:gap-10 gap-5">
+            <a *ngFor="let social of socialList; let last = last" class="hover:scale-105 active:scale-95" [href]="social.url" target="_blank">
+                <img [ngClass]="{'md:h-12 h-8': last, 'md:h-10 h-7': !last}" class="" [src]="social.icon">
             </a>
         </div>
     </div>
     
     <!-- RIGHT -->
-    <div class="cover-image | relative cursor-pointer">
-        <img class="border-4 border-black relative z-30" src="assets/img/juli_bolas.jpg"> <!-- No funciona SHADOW??? -->
-        <img class="absolute top-5 left-5 z-20 opacity-60" src="assets/img/juli_bolas.jpg">
-        <img class="absolute top-10 left-10 z-10 opacity-30" src="assets/img/juli_bolas.jpg">
+    <div class="cover-image | relative cursor-pointer" #coverImage>
+        <img class="border-4 border-black relative z-30" src="assets/img/juli_bolas.jpg">
+        <img class="absolute md:top-5 top-2 md:left-5 left-2 z-20 opacity-60" src="assets/img/juli_bolas.jpg" #image>
+        <img class="absolute md:top-10 top-4 md:left-10 left-4 z-10 opacity-30" src="assets/img/juli_bolas.jpg" #image>
     </div>
     
 </section>

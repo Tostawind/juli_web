@@ -1,4 +1,4 @@
-<header class=" bg-white h-24 px-20 text-black fixed top-0 left-0 right-0 z-20">
+<header class=" bg-white md:h-24 h-14 md:px-20 px-8 text-black sticky top-0 left-0 right-0 z-20">
     <nav class="justify-between items-center h-full max-w-[1600px] mx-auto md:flex hidden">
         <!-- <div class="rope | absolute top-0 left-0 h-5 w-full opacity-40"></div> -->
 
@@ -22,5 +22,28 @@
         
         <div class="rope | absolute bottom-0 left-0 h-5 w-full opacity-40"></div>
     </nav>
+
+    <!-- MOBIL -->
+    <div class="md:hidden flex justify-between items-center h-full">
+        <!-- LOGO -->
+        <div class="cursor-pointer hover:scale-105 active:scale-95">
+            <img class="h-10 object-contain" src="assets/logo/logo.png" alt="Logo">
+        </div>
+
+        <!-- BURGUER -->
+        <label for="burger" class="md:hidden block relative bottom-1 right-0 h-4 w-5 cursor-pointer">
+            <!-- <input [(ngModel)]="isMenuOpen" (change)="toggleMenu($event)" type="checkbox" id="burger" class="hidden peer"> -->
+            <input type="checkbox" id="burger" class="hidden peer">
+            <span class="block h-0.5 w-full bg-rainbox-yellow rounded-xl absolute top-0 
+                            peer-checked:top-1/2 peer-checked:rotate-[calc(45deg*9)] transition-all duration-500 ease-linear">
+            </span>
+            <span class="block h-0.5 w-full bg-rainbox-orange rounded-xl absolute top-[calc(50%-2px)] 
+                            peer-checked:hidden transition-all duration-500 ease-linear">
+            </span>
+            <span class="block h-0.5 w-full bg-rainbox-red rounded-xl absolute top-[calc(100%-4px)] 
+                            peer-checked:top-1/2 peer-checked:rotate-[calc(-45deg*9)] transition-all duration-300 ease-linear">
+            </span>
+        </label>
+    </div>
 </header>
 
